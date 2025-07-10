@@ -1,0 +1,26 @@
+[project]
+name            = "claimstreamai"
+version         = "0.1.0"
+description     = "A Data Engineering project for real-time fraud detection in auto insurance claims"
+readme          = "README.md"
+requires-python = ">=3.12"
+authors         = [
+  { name = "Lina Palacios", email = "linam.palacios@gmail.com" }
+]
+dependencies = [
+  "pandas>=2.3.1,<3.0.0",
+  "numpy>=2.3.1,<3.0.0",
+  "faker>=37.4.0,<38.0.0",
+  "pyarrow>=9.0.0",
+  "protobuf>=3.20.0",
+  "apache-beam >=2.49.0,<3.0.0"
+]
+
+[tool.poetry]
+packages = [
+  { include = "claimstreamai", from = "src" }
+]
+
+[build-system]
+requires    = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
